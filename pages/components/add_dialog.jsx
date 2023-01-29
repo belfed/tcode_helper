@@ -30,7 +30,7 @@ export default function AddDialog({ open, setOpen, data, mutate }) {
             },
             body: JSON.stringify(newTCode)
         });
-        mutate({ ...data, newTCode });
+        mutate([...data, newTCode]);
         initState();
         closeDialog();
     }
